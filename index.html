@@ -147,7 +147,7 @@
         </article>
         <article>
           <div class="coach-photo">
-            <img src="chess-student4.png" alt="Pragalbha Choudhary" />
+            <img class="student-middle" src="chess-student4.png" alt="Pragalbha Choudhary" />
           </div>
           <h3>Pragalbha Choudhary</h3>
           <p>International fide rated </p>
@@ -169,7 +169,8 @@
       </div>
       <form id="trial-form">
         <label>Player's name<input required name="name" placeholder="e.g. Aarav Mehta"></label>
-        <div class="form-row"><label>Age<input required name="age" type="number" min="5" max="99" placeholder="11"></label><label>Experience<select name="experience"><option>New to chess</option><option>Knows the basics</option><option>Tournament player</option></select></label></div>
+        <div class="form-row"><label>Age<input required name="age" type="number" min="5" max="99" placeholder="11"></label><label>Experience<select required name="experience"><option value="">Select one</option><option>New to chess</option><option>Knows the basics</option><option>Tournament player</option></select></label></div>
+        <label>Contact number<input required name="phone" type="tel" placeholder="e.g. +91 98765 43210"></label>
         <label>Parent's email<input required name="email" type="email" placeholder="you@example.com"></label>
         <button class="button button-red" type="submit">Book my free assessment <span>↗</span></button>
         <small>No commitment. Just a friendly game and a clear next step.</small>
