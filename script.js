@@ -42,6 +42,7 @@ trialForm.addEventListener('submit', (event) => {
   const name = formData.get('name') || 'Unknown';
   const age = formData.get('age') || 'Not provided';
   const experience = formData.get('experience') || 'Not provided';
+  const phone = formData.get('phone') || 'Not provided';
   const email = formData.get('email') || 'Not provided';
   const now = new Date();
   const timeLabel = now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
@@ -50,6 +51,7 @@ trialForm.addEventListener('submit', (event) => {
     `Player name: ${name}`,
     `Age: ${age}`,
     `Experience: ${experience}`,
+    `Contact number: ${phone}`,
     `Parent email: ${email}`,
     '',
     'This request was submitted from the website.'
