@@ -46,7 +46,6 @@ trialForm.addEventListener('submit', (event) => {
   const email = formData.get('email') || 'Not provided';
   const now = new Date();
   const timeLabel = now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
-  const subject = `Free assessment request from ${name}`;
   const body = [
     `Player name: ${name}`,
     `Age: ${age}`,
@@ -56,13 +55,14 @@ trialForm.addEventListener('submit', (event) => {
     '',
     'This request was submitted from the website.'
   ].join('\n');
-  const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const whatsappNumber = '917218575996';
+  const whatsappLink = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(body)}`;
 
   success.classList.add('show');
-  success.textContent = `Booked your free trial at ${timeLabel}. A message draft is opening for your email.`;
+  success.textContent = `Booked your free trial at ${timeLabel}. WhatsApp will open so you can send the request.`;
   trialForm.querySelector('button').textContent = 'Booked ✓';
   updateSubmissionStatus(`New request received at ${timeLabel}. Total bookings: ${appliedCount}`);
-  window.location.href = mailtoLink;
+  window.location.href = whatsappLink;
   trialForm.reset();
 });
 
